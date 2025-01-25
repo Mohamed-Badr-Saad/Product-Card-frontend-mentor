@@ -1,0 +1,107 @@
+@use "sass:map";
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+$palette: (
+    dark-cyan: hsl(158, 36%, 37%),
+    cream: hsl(30, 38%, 92%),
+    very-dark-blue: hsl(212, 21%, 14%),
+    dark-grayish-blue: hsl(228, 12%, 48%),
+    white: hsl(0, 0%, 100%)
+);
+
+$font-weights: (
+    small: 500,
+    medium: 600,
+    large: 700
+);
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: map-get($font-weights, small);
+    background-color: map-get($palette, cream);
+    height: 90vh;
+    width: 100vw;
+}
+
+picture,
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: map-get($palette, white);
+    width: 80%;
+    border-radius: 10px;
+    img {
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+.product-details {
+    padding: 0 15px 0 15px;
+    .category {
+        color: map-get($palette, dark-grayish-blue);
+        letter-spacing: 4px;
+        font-family: "Montserrat", sans-serif;
+    }
+    .name {
+        color: map-get($palette, very-dark-blue);
+        font-family: "Fraunces", sans-serif;
+        font-weight: map-get($font-weights, large);
+    }
+    .description {
+        color: map-get($palette, dark-grayish-blue);
+        font-family: "Montserrat", sans-serif;
+        line-height: 180%;
+        font-size: 0.8rem;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 5px 0 15px 0;
+        .new-price {
+            color: map-get($palette, dark-cyan);
+            font-size: 1.8rem;
+            font-weight: map-get($font-weights, large);
+            font-family: "fraunces", sans-serif;
+        }
+        .old-price {
+            color: map-get($palette, dark-grayish-blue);
+            font-family: "Montserrat", sans-serif;
+            text-decoration: line-through;
+        }
+    }
+}
+
+.add-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    color: map-get($palette, white);
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-weight: map-get($font-weights, medium);
+    background-color: map-get($palette, dark-cyan);
+    margin-bottom: 20px;
+}
+
+.add-btn:hover{
+    background-color: darken(map-get($palette, dark-cyan), 15%);
+    // color: map-get($palette, white);
+
+}
