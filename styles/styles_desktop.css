@@ -12,8 +12,8 @@ main {
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   grid-template-areas: "image details";
-  width: 80%;
-  height: 80%;
+  width: 50%;
+  height: 70%;
 }
 
 .product-image {
@@ -36,6 +36,7 @@ main {
 
 .category {
   grid-row: span 1;
+  padding-top: 1rem;
 }
 
 .name {
