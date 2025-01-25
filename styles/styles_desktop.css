@@ -55,4 +55,15 @@ main {
   grid-row: span 1;
 }
 
+@media screen and (max-width: 800px) {
+  main {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  main {
+    width: 95%;
+  }
+}
+
 /*# sourceMappingURL=styles_desktop.css.map */
